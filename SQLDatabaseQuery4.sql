@@ -39,3 +39,7 @@ ALTER TABLE employee_payroll ADD Phone bigint;
 select * from employee_payroll;
 ALTER TABLE employee_payroll ADD Address varchar(250) null default 'Sangli';
 ALTER TABLE employee_payroll ADD Department varchar(250) not null default 'RND';
+
+--UC9 : Ability to extend employee payroll table to have basic pay, deductions,taxable pay,income tax,net pay
+ALTER TABLE employee_payroll ADD Deduction bigint,Taxable_Pay float,Income_Tax float,Net_Pay float;
+select * from employee_payroll;
