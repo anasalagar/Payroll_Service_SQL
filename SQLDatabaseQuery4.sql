@@ -24,3 +24,18 @@ update employee_payroll set Gender='M';
 INSERT INTO employee_payroll VALUES ('PRIYA',22222.22,'2021-05-31','F'),('SHRADHA',33333.33,'2015-01-01','F');
 update employee_payroll set startDate='2001-04-04' where id=4;
 update employee_payroll set startDate='2007-07-07' where id=1 and name='MSD';
+
+---UC7 : Ability to find sum,average,max, min and number of male and female employees----
+select * from employee_payroll;
+select sum(salary) as TotalSalary from employee_payroll;
+select max(salary) as Maximum from employee_payroll;
+select min(salary) as Minimum from employee_payroll;
+select avg(salary) as AverageSalary from employee_payroll;
+select count(salary) as NumOfEmployees from employee_payroll;
+select count(salary) as NumberOfEmployee,Gender from employee_payroll group by Gender;
+
+---UC8 : Ability to extend data to store information like employee phone, address and department----
+ALTER TABLE employee_payroll ADD Phone bigint;
+select * from employee_payroll;
+ALTER TABLE employee_payroll ADD Address varchar(250) null default 'Sangli';
+ALTER TABLE employee_payroll ADD Department varchar(250) not null default 'RND';
