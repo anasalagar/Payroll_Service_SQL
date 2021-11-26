@@ -16,3 +16,11 @@ select * from employee_payroll;
 ---UC5 : Ability to retrieve salary data for particular employee----
 select id,name from employee_payroll where name = 'ANAS';
 select * from employee_payroll where startDate between cast('2020-01-02' as date) and getdate();
+
+-----UC6 : Ability to add gender to table and update table-----
+select * from employee_payroll;
+ALTER TABLE employee_payroll ADD Gender char(1);
+update employee_payroll set Gender='M';
+INSERT INTO employee_payroll VALUES ('PRIYA',22222.22,'2021-05-31','F'),('SHRADHA',33333.33,'2015-01-01','F');
+update employee_payroll set startDate='2001-04-04' where id=4;
+update employee_payroll set startDate='2007-07-07' where id=1 and name='MSD';
