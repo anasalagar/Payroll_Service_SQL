@@ -8,3 +8,6 @@ use payroll_service072;
 	salary float,
 	startDate date
 	);
+----UC3 ability to create employee payroll data service database
+INSERT INTO employee_payroll (name,salary,startDate) VALUES ('MSD',9999999.99,'2017-07-07'),('AMIR',1111111.11,'2021-01-15');
+
